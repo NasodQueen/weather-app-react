@@ -6,27 +6,27 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div id="footer-disclaimer">
-        This Vanilla JavaScript project was coded by Stephanie Zbinden.
+        This React project was coded by Stephanie Zbinden.
         <br />
         It is{" "}
         <a
-          href="https://github.com/NasodQueen/Weather-App"
+          href="https://github.com/NasodQueen/weather-app-react"
           rel="noreferrer"
           target="_blank"
         >
           {" "}
           open-sourced on GitHub
         </a>
-        and
-        <a href="https://www.netlify.com" rel="noreferrer" target="_blank">
-          hosted on Netlify
-        </a>
         .
       </div>
       <div id="footer-music">
         What I listened to while coding:{" "}
-        <a href="https://youtu.be/gd6nEquwuhM" rel="noreferrer" target="_blank">
-          Interstellar (Chillwave - Retrowave - Electronic Mix)
+        <a
+          href="https://www.youtube.com/playlist?list=PLJm38UjKbcCQ7fJphYBfFO9PHTrzN7ExF"
+          rel="noreferrer"
+          target="_blank"
+        >
+          My coding mix
         </a>
       </div>
     </div>
