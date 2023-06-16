@@ -1,0 +1,27 @@
+.AdditionalInfo {
+  border-radius: 15px;
+  padding: 12px 0 0 0;
+  margin-top: 5px;
+  line-height: 28px;
+  background-color: var(--first-color);
+  color: var(--fifth-color);
+}
+
+.additionalInfoTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.additionalInfoColLeft {
+  text-align: right;
+  padding: 0 10px 0 0;
+  border-right: 3px dotted var(--fourth-color);
+}
+
+.additionalInfoColRight {
+  padding: 0 0 0 10px;
+}
+
+.LunarPhaseInfo {
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+.card {
+  text-align: center;
+  border-radius: 15px;
+  border: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+}
+
+.card h5 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px 0;
+  background-color: var(--third-color);
+}
+
+.card .bi {
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 5px 13px;
+  background-color: var(--fifth-color);
+  border: 5px solid var(--second-color);
+}
+
+.card-text {
+  margin-top: 20px;
+  font-size: 20px;
+}

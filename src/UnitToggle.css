@@ -1,0 +1,50 @@
+.temperature-toggle-units {
+  color: var(--fifth-color);
+}
+
+.toggle {
+  margin-top: 20px;
+  --width: 40px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--height) / 2);
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* hiding the checkbox*/
+.toggle__input {
+  display: none;
+}
+
+.toggle__fill {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background-color: var(--first-color);
+}
+
+/* Change to color of the background after the switch has been toggled
+.toggle__input:checked ~ .toggle__fill {
+  background-color: #53a6d8;
+}
+*/
+
+/* Creating the toggle circle*/
+.toggle__fill::after {
+  content: ""; /* Allows for the circle to be displayed*/
+  position: absolute; /* Allows for correct placement of the circle according to the parent*/
+  top: 0;
+  left: 0;
+  height: var(--height);
+  width: var(--height);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+  background-color: var(--fifth-color);
+  border: 3px solid var(--fifth-color);
+}
+
+/* Moving the circle when switch has been toggled*/
+.toggle__input:checked ~ .toggle__fill::after {
+  transform: translateX(var(--height));
+}

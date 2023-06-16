@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Header from "./Header";
+import Form from "./Form";
+import RecentCities from "./RecentCities";
+import PopularCities from "./PopularCities";
+import AdditionalInfo from "./AdditionalInfo";
+import Forecast from "./Forecast";
+import UnitToggle from "./UnitToggle";
+import PaletteButtons from "./PaletteButtons";
+import Footer from "./Footer";
+
+import "./styles.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Container">
+        <Header />
+        <div className="MidBody">
+          <div className="FormCities">
+            <Form />
+            <div className="RecentPopularBody">
+              <RecentCities />
+              <PopularCities />
+            </div>
+          </div>
+          <AdditionalInfo />
+        </div>
+        <div className="Forecast">
+          <Forecast />
+          <Forecast />
+          <Forecast />
+          <Forecast />
+          <Forecast />
+        </div>
+        <UnitToggle />
+      </div>
+      <div className="FooterButtons">
+        <PaletteButtons />
+        <Footer />
+      </div>
     </div>
   );
 }

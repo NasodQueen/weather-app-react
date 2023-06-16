@@ -1,0 +1,21 @@
+.MidBody {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.citiesRecentPopular {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.RecentCities,
+.PopularCities {
+  padding: 10px 10px 10px 24px;
+  border-radius: 50px;
+  margin-right: 20px;
+  max-width: 400px;
+  background-color: var(--fifth-color);
+}
+.RecentPopularBody {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+}
