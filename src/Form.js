@@ -1,32 +1,51 @@
 import React from "react";
 
+
+
 import "./Form.css";
 
 export default function Form() {
+
+  let [city, setCity] = useState("");
+  let [submit, setSubmit] = useState("");
+  let [formSubmit, setFormSubmit] = useState(false);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSubmit(city);
+    setFormSubmit(true);
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
   return (
-    <form id="citySearchForm" className="Form">
+    <div>
+    <form className="Form" onSubmit={handleSubmit}>
       <div className="textInput col-7">
         <input
-          type="text"
+          type="search"
           className="form-control"
-          id="inputCity"
           placeholder=" Enter a city..."
+          value={city}
+          onChange={updateCity}
         />
       </div>
       <button
         type="submit"
-        id="search-button"
         className="btn btn-primary col-2 p-2"
       >
         Search
       </button>
       <button
         type="submit"
-        id="current-city-button"
         className="btn btn-primary col-2 p-2"
       >
         Current
       </button>
     </form>
+    <Weather city={submit} submitState={formSubmit} />
+    </div>
   );
 }
