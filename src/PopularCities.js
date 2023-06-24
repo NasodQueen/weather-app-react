@@ -6,19 +6,19 @@ export default function PopularCities() {
   return (
     <div className="PopularCities">
       <h4>Popular cities:</h4>
-      <a href="" id="new-york-link">
+      <a href="/" id="new-york-link">
         New York
       </a>
-      <a href="#" id="paris-link">
+      <a href="/" id="paris-link">
         Paris
       </a>
-      <a href="#" id="london-link">
+      <a href="/" id="london-link">
         London
       </a>
-      <a href="#" id="tokyo-link">
+      <a href="/" id="tokyo-link">
         Tokyo
       </a>
-      <a href="#" id="hong-kong-link">
+      <a href="/" id="hong-kong-link">
         Hong Kong
       </a>
     </div>
