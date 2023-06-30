@@ -2,46 +2,43 @@ import React from "react";
 
 import "./AdditionalInfo.css";
 
-export default function AdditionalInfo() {
+export default function AdditionalInfo(props) {
   return (
     <div className="AdditionalInfo">
       <div className="additionalInfoTop">
         <div className="additionalInfoColLeft">
           <span title="Feels like">
-            <span id="feels-like-temp">22</span>
+            <span id="feels-like-temp">
+              {Math.round(props.data.feels_like)}
+            </span>
             <span className="temp-unit">°C</span>
-            <i className="bi bi-thermometer-half"> </i>
           </span>
           <br />
           <span title="Max. | Min.">
-            <span id="max-temp">23</span>
-            <span className="temp-unit">°C</span>
-            <span id="max-min-bar">|</span>
-            <span id="min-temp">22</span>
-            <span className="temp-unit">°C</span>
-            <i className="bi bi-speedometer2"> </i>{" "}
+            <span className="max-temp">{Math.round(props.data.temp_max)}</span>
+            <span className="temp-unit">°C</span>{" "}
+            <span className="max-min-bar">|</span>{" "}
+            <span className="min-temp">{Math.round(props.data.temp_min)}</span>
+            <span className="temp-unit">°C</span>{" "}
           </span>
           <br />
           <span title="Humidity">
-            <span id="humidity">35</span>%<i className="bi bi-moisture"> </i>
+            <span className="humidity">{props.data.humidity}</span>%
           </span>
           <br />
         </div>
         <div className="additionalInfoColRight col">
           <span title="Wind speed">
-            <i className="bi bi-wind"></i> <span id="wind-speed">9</span>
-            <span id="wind-speed-unit">km/h</span>{" "}
+            {" "}
+            <span className="wind-speed">
+              {Math.round(props.data.wind)}
+            </span>{" "}
+            <span className="wind-speed-unit">km/h</span>{" "}
           </span>
           <br />
-          <span title="Sunrise">
-            <i className="bi bi-sunrise-fill"> </i>
-            <span id="sunrise">05:36</span>
-          </span>
+          {props.data.sunrise}
           <br />
-          <span title="Sunset">
-            <i className="bi bi-sunset-fill"> </i>
-            <span id="sunset">21:21</span>
-          </span>
+          <span className="sunset">{props.data.sunset}</span>
           <br />
         </div>
       </div>

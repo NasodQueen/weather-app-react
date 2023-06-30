@@ -1,17 +1,39 @@
 import React from "react";
 
 import HeaderNotice from "./HeaderNotice";
-import HeaderData from "./HeaderData";
-import HeaderIcon from "./HeaderIcon";
+import DateFormat from "./DateFormat";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 import "./Header.css";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <div className="Header">
-      <HeaderNotice />
-      <HeaderData />
-      <HeaderIcon />
+      <div className="HeaderNotice">
+        <HeaderNotice code={props.data.icon} />
+      </div>
+      <div className="HeaderData">
+        <div className="HeaderData">
+          <div className="header-city-weather-position">
+            <h1 className="city-name">{props.data.city}</h1>
+            <h2 className="date-and-time">
+              <DateFormat date={props.data.date} />
+            </h2>
+            <h2>
+              <span className="header-weather-text">
+                {props.data.description}
+              </span>{" "}
+              | <WeatherTemperature celsius={props.data.temperature} />
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div className="HeaderIcon">
+        <h1>
+          <WeatherIcon code={props.data.icon} size={52} />
+        </h1>
+      </div>
     </div>
   );
 }
