@@ -1,5 +1,14 @@
 import React from "react";
 
+import {
+  IconTemperature,
+  IconBrandSpeedtest,
+  IconDropletFilled2,
+  IconWind,
+  IconSunrise,
+  IconSunset,
+} from "@tabler/icons-react";
+
 import "./AdditionalInfo.css";
 
 export default function AdditionalInfo(props) {
@@ -7,38 +16,22 @@ export default function AdditionalInfo(props) {
     <div className="AdditionalInfo">
       <div className="additionalInfoTop">
         <div className="additionalInfoColLeft">
-          <span title="Feels like">
-            <span id="feels-like-temp">
-              {Math.round(props.data.feels_like)}
-            </span>
-            <span className="temp-unit">°C</span>
-          </span>
+          {Math.round(props.data.feels_like)}
+          °C <IconTemperature />
           <br />
-          <span title="Max. | Min.">
-            <span className="max-temp">{Math.round(props.data.temp_max)}</span>
-            <span className="temp-unit">°C</span>{" "}
-            <span className="max-min-bar">|</span>{" "}
-            <span className="min-temp">{Math.round(props.data.temp_min)}</span>
-            <span className="temp-unit">°C</span>{" "}
-          </span>
+          {Math.round(props.data.temp_max)}
+          °C | {Math.round(props.data.temp_min)}
+          °C <IconBrandSpeedtest />
           <br />
-          <span title="Humidity">
-            <span className="humidity">{props.data.humidity}</span>%
-          </span>
+          {props.data.humidity}% <IconDropletFilled2 />
           <br />
         </div>
-        <div className="additionalInfoColRight col">
-          <span title="Wind speed">
-            {" "}
-            <span className="wind-speed">
-              {Math.round(props.data.wind)}
-            </span>{" "}
-            <span className="wind-speed-unit">km/h</span>{" "}
-          </span>
+        <div className="additionalInfoColRight">
+          {" "}
+          <IconWind /> {Math.round(props.data.wind)} km/h <br />
+          <IconSunrise /> {props.data.sunrise}
           <br />
-          {props.data.sunrise}
-          <br />
-          <span className="sunset">{props.data.sunset}</span>
+          <IconSunset /> {props.data.sunset}
           <br />
         </div>
       </div>
