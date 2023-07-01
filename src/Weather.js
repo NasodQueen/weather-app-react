@@ -54,26 +54,30 @@ export default function Weather(props) {
       <div className="Weather">
         <Header data={weatherData} />
         <div className="MidBody">
-          <form className="Form" onSubmit={handleSubmit}>
-            <div className="textInput">
-              <input
-                type="search"
-                className="form-control"
-                placeholder=" Enter a city..."
-                autoFocus="true"
-                onChange={updateCity}
-              />
+          <div className="FormRecentPopularContainer">
+            <div className="FormContainer">
+              <form className="Form" onSubmit={handleSubmit}>
+                <div className="textInput">
+                  <input
+                    type="search"
+                    className="form-control"
+                    placeholder=" Enter a city..."
+                    autoFocus="true"
+                    onChange={updateCity}
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary">
+                  Search
+                </button>
+                <button type="submit" className="btn btn-primary">
+                  Current
+                </button>
+              </form>
             </div>
-            <button type="submit" className="btn btn-primary">
-              Search
-            </button>
-            <button type="submit" className="btn btn-primary">
-              Current
-            </button>
-          </form>
-          <div className="RecentPopularBody">
-            <RecentCities />
-            <PopularCities />
+            <div className="RecentPopularBody">
+              <RecentCities />
+              <PopularCities />
+            </div>
           </div>
           <AdditionalInfo data={weatherData} />
         </div>

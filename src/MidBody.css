@@ -1,6 +1,7 @@
 .MidBody {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  margin: 35px 0;
 }
 
 .citiesRecentPopular {
@@ -11,9 +12,10 @@
 .PopularCities {
   padding: 10px 10px 10px 24px;
   border-radius: 50px;
-  margin-right: 20px;
-  max-width: 400px;
   background-color: var(--fifth-color);
+  max-height: 100%;
+  margin: 10px 10px 0 10px;
+  line-height: 30px;
 }
 .RecentPopularBody {
   display: grid;

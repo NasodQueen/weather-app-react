@@ -1,10 +1,8 @@
-import "./App.css";
-
 import Weather from "./Weather";
 import PaletteButtons from "./PaletteButtons";
 import Footer from "./Footer";
 
-import "./styles.css";
+import "./App.css";
 
 function App() {
   return (
@@ -12,7 +10,7 @@ function App() {
       <div className="Container">
         <Weather defaultCity="Bern" />
       </div>
-      <div className="Footer">
+      <div className="FooterContainer">
         <PaletteButtons />
         <Footer />
       </div>

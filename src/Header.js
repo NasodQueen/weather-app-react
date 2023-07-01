@@ -26,9 +26,7 @@ export default function Header(props) {
         </div>
       </div>
       <div className="HeaderIcon">
-        <h1>
-          <WeatherIcon code={props.data.icon} size={52} />
-        </h1>
+        <WeatherIcon code={props.data.icon} size={150} color="#015c92" />
       </div>
     </div>
   );

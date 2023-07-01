@@ -25,22 +25,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.Container {
-  margin-top: 75px;
-  padding: 20px 30px;
-  border-radius: 15px;
-  position: relative;
-  max-width: 1140px;
-  background-color: var(--third-color);
-}
-
-.Forecast {
-  display: grid;
-  grid-template-columns: repeat(5, 2fr);
-}
-
-.FooterButtons {
-  display: grid;
-  grid-template-columns: 3fr 3fr;
-}

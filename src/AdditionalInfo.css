@@ -1,8 +1,7 @@
 .AdditionalInfo {
   border-radius: 15px;
   padding: 12px 0 0 0;
-  margin-top: 5px;
-  line-height: 28px;
+  line-height: 32px;
   background-color: var(--first-color);
   color: var(--fifth-color);
 }

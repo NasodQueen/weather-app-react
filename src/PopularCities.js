@@ -8,16 +8,16 @@ export default function PopularCities() {
       <h4>Popular cities:</h4>
       <a href="/" id="new-york-link">
         New York
-      </a>
+      </a>{" "}
       <a href="/" id="paris-link">
         Paris
-      </a>
+      </a>{" "}
       <a href="/" id="london-link">
         London
-      </a>
+      </a>{" "}
       <a href="/" id="tokyo-link">
         Tokyo
-      </a>
+      </a>{" "}
       <a href="/" id="hong-kong-link">
         Hong Kong
       </a>
