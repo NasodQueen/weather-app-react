@@ -39,7 +39,6 @@ export default function Form() {
           type="search"
           className="form-control"
           placeholder=" Enter a city..."
-          value={city}
           onChange={updateCity}
         />
       </div>
@@ -51,23 +50,4 @@ export default function Form() {
       </button>
     </form>
   );
-
-  if (loaded) {
-    return (
-      <div>
-        {form}
-        <ul>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
-      </div>
-    );
-  } else {
-    return form;
-  }
 }

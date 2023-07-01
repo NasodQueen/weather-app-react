@@ -9,7 +9,6 @@ import Forecast from "./Forecast";
 import UnitToggle from "./UnitToggle";
 
 import "./Weather.css";
-import "./Form.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });

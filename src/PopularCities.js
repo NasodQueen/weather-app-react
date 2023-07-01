@@ -1,24 +1,31 @@
 import React from "react";
 
+import Weather from "./Weather";
+
 import "./MidBody.css";
 
 export default function PopularCities() {
+  function handleClick(event, city) {
+    event.preventDefault();
+    return <Weather defaultCity={city} />;
+  }
+
   return (
     <div className="PopularCities">
       <h4>Popular cities:</h4>
-      <a href="/" id="new-york-link">
+      <a href="/" onClick={(event) => handleClick(event, "New York")}>
         New York
       </a>{" "}
-      <a href="/" id="paris-link">
+      <a href="/" id="paris-link " onClick={handleClick}>
         Paris
       </a>{" "}
-      <a href="/" id="london-link">
+      <a href="/" id="london-link" onClick={handleClick}>
         London
       </a>{" "}
-      <a href="/" id="tokyo-link">
+      <a href="/" id="tokyo-link" onClick={handleClick}>
         Tokyo
       </a>{" "}
-      <a href="/" id="hong-kong-link">
+      <a href="/" id="hong-kong-link" onClick={handleClick}>
         Hong Kong
       </a>
     </div>
