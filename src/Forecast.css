@@ -16,7 +16,7 @@
   background-color: var(--third-color);
 }
 
-.card .bi {
+.card canvas {
   font-size: 40px;
   border-radius: 50%;
   padding: 5px 13px;

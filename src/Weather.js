@@ -30,6 +30,7 @@ export default function Weather(props) {
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
       timezone: response.data.timezone,
+      coordinates: response.data.coord,
     });
   }
 
@@ -81,11 +82,7 @@ export default function Weather(props) {
           <AdditionalInfo data={weatherData} />
         </div>
         <div className="Forecast">
-          <Forecast />
-          <Forecast />
-          <Forecast />
-          <Forecast />
-          <Forecast />
+          <Forecast coordinates={weatherData.coordinates} />
         </div>
         <UnitToggle />
       </div>
