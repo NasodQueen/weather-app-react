@@ -1,19 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./UnitToggle.css";
 
 export default function UnitToggle() {
-  let unit,
-    setUnit = useState("metric");
-  function handleUnit() {
-    if (unit === "metric") {
-      setUnit = "imperial";
-    } else {
-      setUnit = "metric";
-    }
-    alert("Unit change");
-  }
-
   return (
     <div className="UnitToggle">
       <span className="temperature-toggle-units">°C</span>

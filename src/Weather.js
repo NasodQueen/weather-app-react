@@ -6,7 +6,7 @@ import RecentCities from "./RecentCities";
 import PopularCities from "./PopularCities";
 import AdditionalInfo from "./AdditionalInfo";
 import Forecast from "./Forecast";
-import UnitToggle from "./UnitToggle";
+// import UnitToggle from "./UnitToggle";
 
 import "./Weather.css";
 
