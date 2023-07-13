@@ -1,7 +1,21 @@
 .Footer {
+  color: var(--fifth-color);
   display: inline block;
   padding: 10px;
   background-color: var(--third-color);
   border-radius: 15px;
   font-size: 14px;
+}
+
+.FooterTextContainer {
+  margin-left: 5px;
+}
+
+a {
+  color: var(--fifth-color);
+  transition: all ease 200ms;
+}
+
+a:hover {
+  color: var(--first-color);
 }

@@ -1,7 +1,7 @@
 .MidBody {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  margin: 35px 0;
+  margin: 35px 0 25px 0;
 }
 
 .citiesRecentPopular {
@@ -25,10 +25,10 @@
 .Form {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
+  margin-bottom: 10px;
 }
 
 .btn-primary {
-  margin: 5px 10px;
   border-radius: 50px;
   text-align: center;
   font-weight: bold;
@@ -37,7 +37,8 @@
   box-shadow: 5px 5px var(--first-color);
   background-color: var(--fifth-color);
   transition: all 200ms ease;
-  max-width: 150px;
+  width: 150px;
+  margin: 0 auto;
 }
 
 .btn-primary:hover {
@@ -46,22 +47,28 @@
   color: var(--first-color);
 }
 
-#inputCity {
+.form-control {
   font-weight: bold;
-  max-width: 450px;
-  background-color: var(--fifth-color);
+  margin: 0 10px;
+  padding: 8px;
+  border-radius: 50px;
+  max-width: 500px;
+  border: 3px solid var(--second-color);
   color: var(--first-color);
   border: 3px solid var(--second-color);
   box-shadow: 5px 5px var(--first-color);
 }
 
-#inputCity::placeholder {
+.form-control::placeholder {
   color: var(--first-color);
 }
 
-.form-control {
-  margin: 0 10px;
-  padding: 8px;
-  border-radius: 50px;
-  max-width: 500px;
+.PopularCities a,
+.RecentCities a {
+  color: var(--first-color);
+}
+
+.PopularCities a:hover,
+.RecentCities a:hover {
+  color: var(--third-color);
 }

@@ -1,6 +1,6 @@
 .Header {
   display: grid;
-  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-columns: 550px 2fr 180px;
   margin: 20px 0;
   margin-right: 25px;
   border-radius: 15px;
@@ -19,7 +19,7 @@
   padding: 15px 15px;
   position: absolute;
   right: 15px;
-  top: 20px;
+  top: 23px;
   background-color: var(--fifth-color);
   color: var(--first-color);
   border: 10px solid var(--first-color);
@@ -53,8 +53,8 @@ h4 {
 }
 
 .HeaderNotice {
-  height: 155px;
-  line-height: 155px;
+  height: 180px;
+  line-height: 180px;
 }
 
 .HeaderNoticeAdvice {

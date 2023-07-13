@@ -84,7 +84,7 @@ export default function Weather(props) {
         <div className="Forecast">
           <Forecast coordinates={weatherData.coordinates} />
         </div>
-        <UnitToggle />
+        {/* <UnitToggle /> */}
       </div>
     );
   } else {

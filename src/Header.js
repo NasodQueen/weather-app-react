@@ -17,7 +17,9 @@ export default function Header(props) {
         <div className="header-city-weather-position">
           <h1 className="city-name">{props.data.city}</h1>
           <h2>
-            <span className="text-capitalize">{props.data.description}</span> |{" "}
+            <span className="text-capitalize">{props.data.description}</span>
+          </h2>
+          <h2>
             <WeatherTemperature celsius={props.data.temperature} />
           </h2>
           <h2 className="date-and-time">
@@ -26,7 +28,7 @@ export default function Header(props) {
         </div>
       </div>
       <div className="HeaderIcon">
-        <WeatherIcon code={props.data.icon} size={150} color="#015c92" />
+        <WeatherIcon code={props.data.icon} size={165} color="#015c92" />
       </div>
     </div>
   );

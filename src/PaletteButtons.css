@@ -1,15 +1,20 @@
 .PaletteButtons {
-  display: inline block;
+  color: var(--fifth-color);
   padding: 10px;
   background-color: var(--third-color);
   border-radius: 15px;
   font-size: 14px;
-  margin-right: 20px;
+  max-width: 100%;
+}
+
+.PaletteButtonContainer {
+  margin: 5px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .color-btn {
-  width: 100px;
-  margin: 5px;
+  width: 120px;
   border-radius: 50px;
   text-align: center;
   font-weight: bold;

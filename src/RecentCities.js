@@ -7,7 +7,7 @@ export default function RecentCities() {
     <div className="RecentCities">
       <div className="recentCities col">
         <h4>Recently searched cities:</h4>
-        <span id="recentCitiesSpan">Honk Kong, Kyiv, Lucerne</span>
+        <span id="recentCitiesSpan"></span>
       </div>
     </div>
   );
