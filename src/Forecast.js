@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import WeatherIcon from "./WeatherIcon";
 import ForecastDay from "./ForecastDay";
 
 import "./Forecast.css";
@@ -18,7 +17,17 @@ export default function Forecast(props) {
   if (loaded) {
     return (
       <div className="Forecast">
-        <ForecastDay data={forecast[0]} />
+        {forecast.map(function (dailyForecast, index) {
+          if (index > 0 && index < 6) {
+            return (
+              <div className="col" key={index}>
+                <ForecastDay data={dailyForecast} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
     );
   } else {
