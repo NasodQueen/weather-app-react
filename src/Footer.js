@@ -16,7 +16,11 @@ export default function Footer() {
         >
           {" "}
           open-sourced on GitHub
-        </a>
+        </a>{" "}
+        and uses{" "}
+        <a href="https://openweathermap.org" rel="noreferrer" target="_blank">
+          OpenWeatherMap API
+        </a>{" "}
         .
       </div>
       <div id="footer-music">
