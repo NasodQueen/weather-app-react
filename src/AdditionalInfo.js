@@ -1,7 +1,6 @@
 import React from "react";
 
-import Sunrise from "./Sunrise";
-import Sunset from "./Sunset";
+import SunriseSunset from "./SunriseSunset";
 
 import {
   IconTemperature,
@@ -33,13 +32,16 @@ export default function AdditionalInfo(props) {
           {" "}
           <IconWind /> {Math.round(props.data.wind)} km/h <br />
           <IconSunrise />{" "}
-          <Sunrise
-            sunrise={props.data.sunrise}
+          <SunriseSunset
+            time={props.data.sunrise}
             timezone={props.data.timezone}
           />
           <br />
           <IconSunset />{" "}
-          <Sunset sunset={props.data.sunset} timezone={props.data.timezone} />
+          <SunriseSunset
+            time={props.data.sunset}
+            timezone={props.data.timezone}
+          />
           <br />
         </div>
       </div>
