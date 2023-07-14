@@ -10,6 +10,5 @@ export default function Sunrise(props) {
   if (sunriseMinutes < 10) {
     sunriseMinutes = `0${sunriseMinutes}`;
   }
-  console.log(sunriseTime);
   return `${sunriseHours}:${sunriseMinutes}`;
 }

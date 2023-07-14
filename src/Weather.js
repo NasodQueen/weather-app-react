@@ -18,7 +18,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: new Date(response.data.dt * 1000),
+      date: new Date((response.data.dt + response.data.timezone) * 1000),
       description: response.data.weather[0].description,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -62,7 +62,6 @@ export default function Weather(props) {
                     type="search"
                     className="form-control"
                     placeholder=" Enter a city..."
-                    autoFocus={true}
                     onChange={updateCity}
                   />
                 </div>
