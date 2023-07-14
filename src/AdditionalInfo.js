@@ -10,6 +10,7 @@ import {
   IconWind,
   IconSunrise,
   IconSunset,
+  IconMoon,
 } from "@tabler/icons-react";
 
 import "./AdditionalInfo.css";
@@ -49,7 +50,7 @@ export default function AdditionalInfo(props) {
       <div className="LunarPhaseInfo">
         <i className="bi bi-moon-fill" title="Lunar phase">
           <span id="lunar-phase" title="Lunar phase">
-            <LunarPhase />
+            <IconMoon /> <LunarPhase />
           </span>
         </i>
       </div>
