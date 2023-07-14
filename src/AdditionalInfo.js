@@ -1,6 +1,7 @@
 import React from "react";
 
 import SunriseSunset from "./SunriseSunset";
+import LunarPhase from "./LunarPhase";
 
 import {
   IconTemperature,
@@ -48,7 +49,7 @@ export default function AdditionalInfo(props) {
       <div className="LunarPhaseInfo">
         <i className="bi bi-moon-fill" title="Lunar phase">
           <span id="lunar-phase" title="Lunar phase">
-            Waning Gibbous Moon
+            <LunarPhase />
           </span>
         </i>
       </div>
