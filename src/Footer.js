@@ -13,9 +13,9 @@ export default function Footer() {
             rel="noreferrer"
             target="_blank"
           >
-            me
+            Steph
           </a>
-          {" :) "}
+          {" (that's me!) "}
           <br />
           It is{" "}
           <a
