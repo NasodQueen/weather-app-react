@@ -17,6 +17,23 @@
   margin: 10px 10px 0 10px;
   line-height: 30px;
 }
+
+/* Currently unavailable */
+.RecentCities,
+.PopularCities {
+  height: 80px;
+  color: var(--fifth-color);
+  display: grid;
+  place-items: center;
+  opacity: 0.5;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--second-color),
+    var(--second-color) 10px,
+    var(--first-color) 10px,
+    var(--first-color) 20px
+  );
+}
 .RecentPopularBody {
   display: grid;
   grid-template-columns: 6fr 6fr;
@@ -45,6 +62,22 @@
   background-color: var(--fourth-color);
   border: 3px solid var(--first-color);
   color: var(--first-color);
+}
+
+.disabled {
+  opacity: 0.5;
+  color: var(--fifth-color);
+  border: none;
+  box-shadow: none;
+  display: grid;
+  place-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--second-color),
+    var(--second-color) 10px,
+    var(--first-color) 10px,
+    var(--first-color) 20px
+  );
 }
 
 .form-control {

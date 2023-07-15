@@ -5,9 +5,8 @@ import "./MidBody.css";
 export default function RecentCities() {
   return (
     <div className="RecentCities">
-      <div className="recentCities col">
-        <h4>Recently searched cities:</h4>
-        <span id="recentCitiesSpan"></span>
+      <div className="recentCities">
+        <h4>Currently unavailable</h4>
       </div>
     </div>
   );

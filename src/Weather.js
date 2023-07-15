@@ -8,8 +8,6 @@ import AdditionalInfo from "./AdditionalInfo";
 import Forecast from "./Forecast";
 // import UnitToggle from "./UnitToggle";
 
-import "./Weather.css";
-
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
@@ -68,8 +66,12 @@ export default function Weather(props) {
                 <button type="submit" className="btn btn-primary">
                   Search
                 </button>
-                <button type="submit" className="btn btn-primary">
-                  Current
+                <button
+                  type="submit"
+                  className="btn btn-primary disabled"
+                  disabled={true}
+                >
+                  n/a
                 </button>
               </form>
             </div>
