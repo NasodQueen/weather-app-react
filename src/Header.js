@@ -8,7 +8,6 @@ import WeatherTemperature from "./WeatherTemperature";
 import "./Header.css";
 
 export default function Header({ data, theme }) {
-  console.log(theme);
   return (
     <div className="Header">
       <div className="HeaderNotice">

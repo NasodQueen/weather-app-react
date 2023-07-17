@@ -26,7 +26,6 @@ export default function WeatherIcon(props) {
     "50d": "FOG",
     "50n": "FOG",
   };
-  console.log(props.theme);
 
   const themeMapping = {
     sun: "#c73866",

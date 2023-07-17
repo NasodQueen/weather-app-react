@@ -8,7 +8,6 @@ import "./Forecast.css";
 export default function Forecast({ coordinates, theme }) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
-  console.log(coordinates);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
