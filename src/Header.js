@@ -7,28 +7,29 @@ import WeatherTemperature from "./WeatherTemperature";
 
 import "./Header.css";
 
-export default function Header(props) {
+export default function Header({ data, theme }) {
+  console.log(theme);
   return (
     <div className="Header">
       <div className="HeaderNotice">
-        <HeaderNotice code={props.data.icon} />
+        <HeaderNotice code={data.icon} />
       </div>
       <div className="HeaderData">
         <div className="header-city-weather-position">
-          <h1 className="city-name">{props.data.city}</h1>
+          <h1 className="city-name">{data.city}</h1>
           <h2>
-            <span className="text-capitalize">{props.data.description}</span>
+            <span className="text-capitalize">{data.description}</span>
           </h2>
           <h2>
-            <WeatherTemperature celsius={props.data.temperature} />
+            <WeatherTemperature celsius={data.temperature} />
           </h2>
           <h2 className="date-and-time">
-            <DateFormat date={props.data.date} />
+            <DateFormat date={data.date} />
           </h2>
         </div>
       </div>
       <div className="HeaderIcon">
-        <WeatherIcon code={props.data.icon} size={165} />
+        <WeatherIcon code={data.icon} size={165} theme={theme} />
       </div>
     </div>
   );

@@ -4,19 +4,19 @@ import WeatherIcon from "./WeatherIcon";
 
 import "./Forecast.css";
 
-export default function ForecastDay(props) {
+export default function ForecastDay({ data, theme }) {
   function maxTemperature() {
-    let temperature = Math.round(props.data.temp.max);
+    let temperature = Math.round(data.temp.max);
     return `${temperature}`;
   }
 
   function minTemperature() {
-    let temperature = Math.round(props.data.temp.min);
+    let temperature = Math.round(data.temp.min);
     return `${temperature}`;
   }
 
   function day() {
-    let date = new Date(props.data.dt * 1000);
+    let date = new Date(data.dt * 1000);
     let day = date.getDay();
     let days = [
       "Sunday",
@@ -27,7 +27,6 @@ export default function ForecastDay(props) {
       "Friday",
       "Saturday",
     ];
-
     return days[day];
   }
 
@@ -36,11 +35,7 @@ export default function ForecastDay(props) {
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">{day()}</h5>
-          <WeatherIcon
-            code={props.data.weather[0].icon}
-            size={50}
-            color="#015c92"
-          />
+          <WeatherIcon code={data.weather[0].icon} size={50} theme={theme} />
           <p className="card-text">
             <span className="forecast-max-temp">{maxTemperature()}</span>
             <span className="temp-unit-max">°C</span> |{" "}

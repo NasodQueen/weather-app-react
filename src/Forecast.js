@@ -5,9 +5,10 @@ import ForecastDay from "./ForecastDay";
 
 import "./Forecast.css";
 
-export default function Forecast(props) {
+export default function Forecast({ coordinates, theme }) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+  console.log(coordinates);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -17,12 +18,12 @@ export default function Forecast(props) {
   //sets loaded to false if the props change
   useEffect(() => {
     setLoaded(false);
-  }, [props.coordinates]);
+  }, [coordinates.coordinates]);
 
   function load() {
     let apiKey = "57b2c40fdae71a6ba41d72685e3226e2";
-    let lat = props.coordinates.lat;
-    let lon = props.coordinates.lon;
+    let lat = coordinates.lat;
+    let lon = coordinates.lon;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -34,7 +35,7 @@ export default function Forecast(props) {
           if (index > 0 && index < 6) {
             return (
               <div key={index}>
-                <ForecastDay data={dailyForecast} />
+                <ForecastDay data={dailyForecast} theme={theme} />
               </div>
             );
           } else {

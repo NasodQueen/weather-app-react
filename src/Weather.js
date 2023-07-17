@@ -37,6 +37,7 @@ export default function Weather(props) {
     };
     setTheme(codeMapping[iconCode]);
   }, []);
+
   useEffect(() => {
     applyTheme(weatherData.icon);
   }, [weatherData.icon, applyTheme]);
@@ -109,7 +110,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <Header data={weatherData} />
+        <Header data={weatherData} theme={theme} />
         <div className="MidBody">
           <div className="FormRecentPopularContainer">
             <div className="FormContainer">
@@ -142,7 +143,7 @@ export default function Weather(props) {
           <AdditionalInfo data={weatherData} />
         </div>
         <div className="Forecast">
-          <Forecast coordinates={weatherData.coordinates} />
+          <Forecast coordinates={weatherData.coordinates} theme={theme} />
         </div>
         {/* <UnitToggle /> */}
       </div>
